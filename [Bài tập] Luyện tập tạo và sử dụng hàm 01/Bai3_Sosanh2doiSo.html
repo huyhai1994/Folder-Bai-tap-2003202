@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let Argument1 = +prompt("Nhập đối số 1: ");
+    let Argument2 = +prompt("Nhập đối số 2: ");
+    alert(compare_UserInputTwoArguments(Argument1, Argument2));
+
+    function compare_UserInputTwoArguments(Argument1, Argument2) {
+        let sum;
+        if (Argument1 > Argument2) {
+            return "Tham số 1 lớn hơn tham số 2: ";
+        } else if (Argument2 > Argument1) {
+            sum = Argument2 + Argument1;
+            return sum + " ";
+        }
+    }
+</script>
+</body>
+</html>

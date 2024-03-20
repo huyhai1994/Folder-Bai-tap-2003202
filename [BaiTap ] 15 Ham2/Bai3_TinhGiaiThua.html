@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = 2;
+    let factorial = calculate_Factorial(number);
+    alert(factorial);
+
+    function calculate_Factorial(number) {
+        let multiple = 1;
+        for (let i = 1; i <= number; i++) {
+            multiple *= i;
+        }
+        return multiple;
+    }
+</script>
+</body>
+</html>

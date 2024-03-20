@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table td tr {
+        border-collapse: collapse;
+    }
+</style>
+<body>
+<form action="index.html">
+    <input type="text" id="addProduct" placeholder="Fruit">
+    <input type="submit" name="Submit" value="Update">
+
+</form>
+<script>
+    let ProductList = ["Apple", "Orange", "Banana",
+        "Lemon", "DragonFruit", "WaterMelon"];
+    displayProductsHTML();
+    deleteProduct_in_List("DragonFruit");
+    displayProductsHTML();
+
+    function displayProducts() {
+        for (let i = 0; i < ProductList.length; i++) {
+            console.log(ProductList[i]);
+        }
+        console.log(" ")
+    }
+
+    function displayProductsHTML() {
+        document.write(" ");
+        let displayTable = "<table border='1'> ";
+        displayTable = displayTable + "<tr>";
+        displayTable = displayTable + "<th>" + "STT" + "</th>";
+        displayTable = displayTable + "<th>" + "Tên Sản Phẩm" + "</th>";
+        displayTable = displayTable + "</tr>";
+        for (let i = 0; i < ProductList.length; i++) {
+            displayTable = displayTable + "<tr>";
+            displayTable = displayTable + "<td>" + (i + 1) + "</td>";
+            displayTable = displayTable + "<td>" + ProductList[i] + "</td>";
+            displayTable = displayTable + "<td>" + "<button type='button' onclick='deleteProduct_in_ListHTML(event)'> Xóa </button>" + "</td>";
+            displayTable = displayTable + "</tr>";
+        }
+        displayTable = displayTable + "</table> <br>";
+        document.write(displayTable);
+    }
+
+    function renameProduct(Product, newProduct) {
+        for (let i = 0; i < ProductList.length; i++) {
+            if (ProductList[i] === Product) {
+                ProductList[i] = newProduct;
+                break;
+            }
+        }
+
+    }
+
+    function addProductToList(Product) {
+        ProductList.push(Product);
+    }
+
+    function deleteProduct_in_List(Product) {
+        let location;
+        for (let i = 0; i < ProductList.length; i++) {
+            if (ProductList[i] === Product) {
+                reportProductLocation = i;
+                for (let j = reportProductLocation; j < ProductList.length; j++) {
+                    ProductList[j] = ProductList[j + 1];
+                }
+                break;
+            }
+        }
+        ProductList[ProductList.length - 1] = '';
+    }
+
+    function deleteProduct_in_ListHTML(Product) {
+        let location;
+        for (let i = 0; i < ProductList.length; i++) {
+            if (ProductList[i] === Product.target.value) {
+                reportProductLocation = i;
+                for (let j = reportProductLocation; j < ProductList.length; j++) {
+                    ProductList[j] = ProductList[j + 1];
+                }
+                break;
+            }
+        }
+        ProductList[ProductList.length - 1] = 0;
+    }
+
+
+</script>
+</body>
+</html>

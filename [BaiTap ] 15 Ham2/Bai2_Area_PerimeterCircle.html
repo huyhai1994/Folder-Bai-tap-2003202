@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let PI = 3.1415;
+    let Radius  = 5;
+    let areaCircle = calculate_AreaCircle(Radius);
+    let perimeterCircle = calculate_PerimeterCircle(Radius);
+    alert(areaCircle);
+    alert(perimeterCircle);
+
+    function calculate_AreaCircle(Radius){
+        return PI*Radius*Radius;
+    }
+    function calculate_PerimeterCircle(Radius){
+        return 2*PI*Radius;
+    }
+</script>
+</body>
+</html>

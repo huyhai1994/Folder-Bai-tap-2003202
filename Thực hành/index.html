@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 1;
+    let b = 11;
+    print_a_to_b(a, b);
+    let sum = getSum_From_a_To_b(a, b);
+    console.log("  Tổng từ " + a + " đến " + b + " là " + sum);
+
+    function print_a_to_b(a, b) {
+        console.log("a = " + a);
+        console.log("b = " + b);
+    }
+
+    function getSum_From_a_To_b(a, b) {
+        let sum = 0;
+        for (a = 0; a <= b; a++) {
+            sum += a;
+        }
+        return sum;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let starsName = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellarName = ["Ursa Minor", "Tarurus", " Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let userInputStarName = prompt("Nhập tên ngôi sao");
+    let starNameIndex = 0;
+    input_starsName_find_constellarName(userInputStarName);
+
+    function input_starsName_find_constellarName() {
+        for (let i = 0; i < starsName.length; i++) {
+            if (userInputStarName === starsName[i]) {
+                starNameIndex = i;
+                break;
+            }
+        }
+        if (starNameIndex === 0) {
+            alert("không tìm thấy chòm sao tương ứng");
+        } else if (starNameIndex !== 0) {
+            display_constellarName();
+        }
+    }
+    function display_constellarName() {
+        alert(constellarName[starNameIndex]);
+    }
+</script>
+</body>
+</html>

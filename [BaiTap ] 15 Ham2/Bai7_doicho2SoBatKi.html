@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Number1 = +prompt("Nhap So 1: ");
+    let Number2 = +prompt("Nhap So 2: ");
+    alert("So 1: " + Number1);
+    alert("So 2: " + Number2);
+    swapTwoNumber();
+    alert("So 1 [da doi cho]: " + Number1);
+    alert("So 2 [da doi cho]: " + Number2);
+
+    function swapTwoNumber() {
+        let temp;
+        temp = Number1;
+        Number1 = Number2;
+        Number2 = temp;
+    }
+</script>
+</body>
+</html>
